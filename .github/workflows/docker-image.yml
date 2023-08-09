@@ -22,4 +22,4 @@ jobs:
     - name: Build the Docker image
       run: docker build  -t dellawills .
     - name: Push to Dockerhub
-      run: docker push denishjackson/dellawills:latest
+      run: docker push "${{ secrets.DOCKERHUB_USERNAME }}/dellawills:latest"
