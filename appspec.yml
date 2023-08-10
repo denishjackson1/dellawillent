@@ -1,8 +1,26 @@
 version: 0.0
 os: linux
 files:
-  - source: dellawillent/
+  - source: css/
     destination: /var/www/html/
+  - source: images/
+    destination: /var/www/html/
+  - source: js/
+    destination: /var/www/html/
+  - source: about.html
+    destination: /var/www/html/
+  - source: contact.html
+    destination: /var/www/html/
+  - source: cycle.html
+    destination: /var/www/html/
+  - source: index.html
+    destination: /var/www/html/
+  - source: news.html
+    destination: /var/www/html/
+  - source: appspec.yml
+    destination: /home/ubuntu
+  - source: scripts/
+    destination: /home/ubuntu
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies
