@@ -3,21 +3,28 @@ os: linux
 files:
   - source: /css
     destination: /var/www/html/
+    overwrite: true
   - source: /images
     destination: /var/www/html/
+    overwrite: true
   - source: /js
     destination: /var/www/html/
+    overwrite: true
   - source: /about.html
     destination: /var/www/html/
+    overwrite: true
   - source: /contact.html
     destination: /var/www/html/
+    overwrite: true
   - source: /cycle.html
     destination: /var/www/html/
+    overwrite: true
   - source: /index.html
     destination: /var/www/html/
+    overwrite: true
   - source: /news.html
-    destination: /var/www/html/
-
+    destination: /var/www/html
+    overwrite: true
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies.sh
