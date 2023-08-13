@@ -1,6 +1,5 @@
 version: 0.0
 os: linux
-# Copy Files to Target instance
 files:
   - source: /css
     destination: /var/www/html/
