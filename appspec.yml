@@ -1,9 +1,9 @@
 version: 0.0
 os: linux
 files:
-  # - source: /css
-  #   destination: /var/www/html/
-  #   overwrite: true
+  - source: /css
+    destination: /var/www/html/
+    overwrite: true
   - source: /images
     destination: /var/www/html/
     overwrite: true
