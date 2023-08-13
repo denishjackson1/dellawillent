@@ -1,36 +1,52 @@
 version: 0.0
 os: linux
 files:
-  - source: css/
+  - source: /css
     destination: /var/www/html/
-  - source: images/
+  - source: /images
     destination: /var/www/html/
-  - source: js/
+  - source: /js
     destination: /var/www/html/
-  - source: about.html
+  - source: /about.html
     destination: /var/www/html/
-  - source: contact.html
+  - source: /contact.html
     destination: /var/www/html/
-  - source: cycle.html
+  - source: /cycle.html
     destination: /var/www/html/
-  - source: index.html
+  - source: /index.html
     destination: /var/www/html/
-  - source: news.html
+  - source: /news.html
     destination: /var/www/html/
-  - source: appspec.yml
-    destination: /home/ubuntu
-  - source: scripts/
-    destination: /home/ubuntu
+
 hooks:
   BeforeInstall:
-    - location: scripts/install_dependencies
+    - location: scripts/install_dependencies.sh
       timeout: 300
       runas: root
-    - location: scripts/start_server
+      permissions:
+        - object: scripts/install_dependencies.sh
+          pattern: "*"
+          mode: +x
+  AfterInstall:
+    - location: scripts/install.sh
       timeout: 300
       runas: root
+      permissions:
+        - object: scripts/install.sh
+          pattern: "*"
+          mode: +x
+    - location: scripts/start_server.sh
+      timeout: 30
+      runas: root
+      permissions:
+        - object: scripts/start_server.sh
+          pattern: "*"
+          mode: +x
   ApplicationStop:
-    - location: scripts/stop_server
-      timeout: 300
+    - location: scripts/stop_server.sh
+      timeout: 30
       runas: root
-
+      permissions:
+        - object: scripts/stop_server.sh
+          pattern: "*"
+          mode: +x
