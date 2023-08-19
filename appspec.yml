@@ -10,7 +10,7 @@ files:
   # - source: css/
   #   destination: /var/www/html/
   #   overwrite: true
-  # - source: images/
+  - source: images/
     destination: /var/www/html/
     overwrite: true
   - source: /js
