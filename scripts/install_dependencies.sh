@@ -1,5 +1,6 @@
 #!/bin/bash
 
+sudo rm -rf /var/www/html/index.html
 # Check if httpd (Apache) command is available
 if ! [ -x "$(command -v apache2)" ]; then
     # If httpd is not available, install it using apt
