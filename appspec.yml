@@ -7,10 +7,10 @@ files:
   - source: scripts/
     destination: /home/ubuntu
     overwrite: true
-  - source: css/
-    destination: /var/www/html/
-    overwrite: true
-  - source: images/
+  # - source: css/
+  #   destination: /var/www/html/
+  #   overwrite: true
+  # - source: images/
     destination: /var/www/html/
     overwrite: true
   - source: /js
