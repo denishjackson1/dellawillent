@@ -6,16 +6,16 @@ files:
     destination: /home/ubuntu
     overwrite: true
   - source: /scripts
-    destination: /home/ubuntu
+    destination: /home/ubuntu/scripts
     overwrite: true
-  # - source: /css
-  #   destination: /var/www/html/
-  #   overwrite: true
+  - source: /css
+    destination: /var/www/html/css
+    overwrite: true
   - source: /images
-    destination: /var/www/html/
+    destination: /var/www/html/images
     overwrite: true
   - source: /js
-    destination: /var/www/html/
+    destination: /var/www/html/js
     overwrite: true
   - source: /about.html
     destination: /var/www/html/
