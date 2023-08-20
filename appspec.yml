@@ -4,13 +4,13 @@ files:
   - source: /appspec.yml
     destination: /home/ubuntu
     overwrite: true
-  - source: scripts/
+  - source: /scripts
     destination: /home/ubuntu
     overwrite: true
-  - source: css/
+  - source: /css
     destination: /var/www/html/
     overwrite: true
-  - source: images/
+  - source: /images
     destination: /var/www/html/
     overwrite: true
   - source: /js
