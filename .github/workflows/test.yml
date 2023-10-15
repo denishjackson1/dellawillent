@@ -1,0 +1,27 @@
+name: Code Testing
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test-html:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Set up Ruby
+      uses: actions/setup-ruby@v2
+      with:
+        ruby-version: 2.7
+
+    - name: Install Dependencies
+      run: |
+        gem install bundler
+        bundle install
+
+    - name: Test HTML
+      run: bundle exec htmlproofer --disable-external --allow-hash-href ./path/to/html/files
