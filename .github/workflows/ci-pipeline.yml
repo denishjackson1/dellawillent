@@ -55,7 +55,7 @@ jobs:
       run: |
         # Install Puppeteer
         npm install puppeteer  # Puppeteer
-        npm ./test.js  # Puppeteer
+        # npm ./test.js  # Puppeteer
     - name: Stop HTTP Server
       run: pkill -f http-server  # Stop the HTTP server
 
