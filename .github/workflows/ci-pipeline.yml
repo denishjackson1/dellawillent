@@ -51,13 +51,13 @@ jobs:
         npm install -g http-server  # Install a simple HTTP server
         http-server -p 8080 &  # Start the server in the background
 
-    # - name: Run Tests
-    #   run: |
-    #     # Install Puppeteer
-    #     npm install puppeteer  # Puppeteer
-    #     npx jest ./test.js  # Puppeteer
-    # - name: Stop HTTP Server
-    #   run: pkill -f http-server  # Stop the HTTP server
+    - name: Run Tests
+      run: |
+        # Install Puppeteer
+        npm install puppeteer  # Puppeteer
+        npm test.js  # Puppeteer
+    - name: Stop HTTP Server
+      run: pkill -f http-server  # Stop the HTTP server
 
   deploy:
     runs-on: ubuntu-latest
