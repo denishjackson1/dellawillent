@@ -43,13 +43,13 @@ jobs:
       with:
         node-version: '16'
 
-    - name: Install Dependencies
-      run: npm install  # If you have npm dependencies
+    # - name: Install Dependencies
+    #   run: npm install  # If you have npm dependencies
 
-    # - name: Serve HTML Application
-    #   run: |
-    #     npm install -g http-server  # Install a simple HTTP server
-    #     http-server -p 8080 &  # Start the server in the background
+    - name: Serve HTML Application
+      run: |
+        npm install -g http-server  # Install a simple HTTP server
+        http-server -p 8080 &  # Start the server in the background
 
     # - name: Run Tests
     #   run: |
