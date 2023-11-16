@@ -3,9 +3,9 @@ kind: Deployment
 metadata:
   name: dellawills
   labels:
-    app: dellawills
+    name: dellawills
 spec:
-  replicas: 3  # Number of desired pods
+  replicas: 4
   selector:
     matchLabels:
       app: dellawills
@@ -15,8 +15,5 @@ spec:
         app: dellawills
     spec:
       containers:
-        - name: dellawills-container
-          image: denishjackson/dellawills:latest  # Replace with your Docker image details
-          ports:
-            - containerPort: 8085  # Port your application listens on
-          # Other container configurations like environment variables, volumes, etc.
+      - name: dellawills-container
+        image: denishjackson/dellawills:latest
