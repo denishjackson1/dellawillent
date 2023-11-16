@@ -2,8 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: dellawills-deployment
-  labels:
-    name: dellawils
 spec:
   replicas: 4
   selector:
@@ -15,5 +13,7 @@ spec:
         app: dellawills
     spec:
       containers:
-      - name: dellawills-container
+      - name: dellawills
         image: denishjackson/dellawills:latest
+        ports:
+        - containerPort: 5000
