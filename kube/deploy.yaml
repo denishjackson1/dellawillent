@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: node
+  name: dellawills-deployment
   labels:
-    name: node
+    name: dellawils
 spec:
   replicas: 4
   selector:
     matchLabels:
-      app: node
+      app: dellawills
   template:
     metadata:
       labels:
-        app: node
+        app: dellawills
     spec:
       containers:
-      - name: node
+      - name: dellawills-container
         image: denishjackson/dellawills:latest
