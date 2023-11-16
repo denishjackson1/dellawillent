@@ -9,4 +9,4 @@ spec:
     - protocol: TCP
       port: 5000  # Port exposed by the service
       targetPort: 5000  # Port on the pods the service will forward traffic to
-  type: ClusterIP  # Type of service, can be ClusterIP, NodePort, LoadBalancer, or ExternalName
+  type: LoadBalancer  # Type of service, can be ClusterIP, NodePort, LoadBalancer, or ExternalName
