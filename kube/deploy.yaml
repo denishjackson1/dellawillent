@@ -16,4 +16,4 @@ spec:
       - name: dellawills
         image: denishjackson/dellawills:latest
         ports:
-        - containerPort: 5000
+        - containerPort: 9000
