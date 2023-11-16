@@ -7,6 +7,6 @@ metadata:
 spec:
   selector:
     app: dellawills
-  type: LoadBalancer
+  type: NodePort
   ports:
     - port: 9000
