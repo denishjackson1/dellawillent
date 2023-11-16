@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dellawills
+  labels:
+    app: dellawills
+spec:
+  replicas: 3  # Number of desired pods
+  selector:
+    matchLabels:
+      app: dellawills
+  template:
+    metadata:
+      labels:
+        app: dellawills
+    spec:
+      containers:
+        - name: dellawills-container
+          image: denishjackson/dellawills:latest  # Replace with your Docker image details
+          ports:
+            - containerPort: 8085  # Port your application listens on
+          # Other container configurations like environment variables, volumes, etc.

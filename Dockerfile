@@ -1,20 +1,11 @@
-# # Use an official Nginx runtime as a base image
-# FROM nginx:latest
-
-# # Set the working directory to /usr/share/nginx/html
-# WORKDIR /usr/share/nginx/html
-
-# # Copy the current directory contents into the container at /usr/share/nginx/html
-# COPY . .
-
-# # Expose port 80 to allow external access
-# EXPOSE 80
-
-# # Command to run when the container starts
-# CMD ["nginx", "-g", "daemon off;"]
-
-# Use the httpd (Apache HTTP Server) base image
+# Use a base image, for example, NGINX
 FROM nginx:alpine
 
-# Copy the HTML file to the default Apache web root
+# Copy your HTML file into the NGINX server directory
 COPY . /usr/share/nginx/html
+
+# Expose port 8081 (the port where your HTML application will be accessible)
+EXPOSE 5000
+
+# Start NGINX when the container starts
+CMD ["nginx", "-g", "daemon off;"]
