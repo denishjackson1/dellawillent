@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/denishjackson1/dellawillent.git
     targetRevision: HEAD
-    path: kube-manifest
+    path: kube
   destination: 
     server: https://kubernetes.default.svc
     namespace: dev
