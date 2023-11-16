@@ -2,16 +2,22 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: dellawills
+  namespace: argocd
 spec:
-  destination:
-    namespace: dev
-    server: https://kubernetes.default.svc
   project: default
+
   source:
     repoURL: https://github.com/denishjackson1/dellawillent.git
-    path: kube-manifest
     targetRevision: HEAD
+    path: kube-manifest
+  destination: 
+    server: https://kubernetes.default.svc
+    namespace: dev
+
   syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+
     automated:
-      prune: true
       selfHeal: true
+      prune: true
