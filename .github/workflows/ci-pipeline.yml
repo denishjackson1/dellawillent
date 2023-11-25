@@ -1,4 +1,4 @@
-name: Code, Test, Build Image and Deploy
+name: Code, Test, Build Image and Deploy Application
 
 on:
   push:
